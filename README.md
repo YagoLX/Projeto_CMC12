@@ -144,7 +144,7 @@ Para uma passada rápida (sem sintonia), defina `RODAR_OTIM = false` no topo de 
 | `u_max` | 30 N·m | **Placeholder** — saturação de torque no eixo de saída. |
 | grade `ρ` | 20 nós, `θ ∈ [0°, 85°]` | Satura antes de 90° para o último ganho não ficar impraticável. |
 
-> ⚠️ `J0`, `u_max` e `b` são **placeholders** marcados no código. Enquanto não vierem do CAD do SatNOGS / datasheet do motor / teste real, os números do relatório são provisórios.
+> ⚠️ `J0`, `u_max` e `b` são **placeholders** marcados no código. Enquanto não vierem do CAD do SatNOGS / datasheet do motor / teste real, os números do relatório são provisórios, futuramente serão medidos empiricamente.
 
 ---
 
