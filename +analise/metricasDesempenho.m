@@ -35,7 +35,7 @@ function m = metricasDesempenho(t, y, r_final, y0)
   end
   if isempty(idx), m.td = NaN; else, m.td = t(idx); end
 
-  % Protege NaN de stepinfo (respostas que nao assentam) para o custo do CMA-ES.
+  % Protege NaN de stepinfo.
   if isnan(m.ts), m.ts = t(end); end
   if isnan(m.tr), m.tr = t(end); end
 end

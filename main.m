@@ -26,7 +26,7 @@ for k = round(linspace(1, numel(P.rho_grid), 5))
   sysCL = ss(Aa - Ba*Kk, [0;0;1], [C 0], 0);   % entrada = ref no integrador
   step(sysCL, 8);
 end
-title('T2: degrau no modelo congelado (deve cumprir os 5 requisitos)');
+title('T2: degrau no modelo fixo');
 
 %% Cenarios
 cenDeg  = sim.cenarioDegrau(P, 0, 90);     % 7a  degrau, elevacao fixa 0deg
@@ -68,7 +68,7 @@ for f = [0.8 1.0 1.2]
   plot(out.t, rad2deg(out.phi), 'DisplayName', sprintf('J_L x%.1f', f));
 end
 yline(rad2deg(cenZen.rfinal),'k--'); legend('Location','best');
-title('T6: LQI mantem ess->0 mesmo com J_L errado (adaptar vs cancelar)');
+title('T6: LQI Rejeição à erro');
 
 %% T7 - Custo de controle por metodo (ja sai na tabela de comparaMetodos)
 %  A coluna 'custo' = int u^2 dt. Compare fixo/chaveado/continuo na mesma trajetoria.
@@ -77,4 +77,4 @@ title('T6: LQI mantem ess->0 mesmo com J_L errado (adaptar vs cancelar)');
 outAnim = sim.simulaCenario(P, G, 'continuo', cenGPS);
 viz.animaAntena(outAnim, fullfile(here,'resultados','antena.mp4'));
 
-disp('Pipeline concluido.');
+disp('Concluido.');

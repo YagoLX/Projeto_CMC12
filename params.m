@@ -6,14 +6,14 @@ function P = params()
 
 % ---------- Parametros fisicos da planta (azimute) ----------
 P.JL   = 0.95;      % inercia da carga (antena Yagi CF-17), kg*m^2  [J=mL^2/3]
-P.J0   = 0.02;      % PLACEHOLDER inercia constante (yoke + rotor refletido por N^2)
+P.J0   = 0.02;      % inercia constante
                     %   regulariza a singularidade do zenite; valor real vem do CAD SatNOGS
 P.b    = 1;         % atrito viscoso de azimute, N*m*s/rad
                     %   chute por eficiencia do worm ~50%; REAVALIAR no teste de erro de modelo
 P.N    = 30;        % reducao das engrenagens (1:30)
 
 % ---------- Atuador (TPHSM refletido pelo eixo de saida) ----------
-P.umax = 30.0;      % PLACEHOLDER saturacao de torque no eixo de azimute, N*m
+P.umax = 30.0;      %   saturacao de torque no eixo de azimute, N*m
                     %   ~torque de parada do motor * N * eficiencia; ajustar ao datasheet
 
 % ---------- Grade de gain scheduling ----------
