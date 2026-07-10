@@ -1,0 +1,30 @@
+# === MATLAB ===
+*.asv            # autosave do editor
+*.m~            # backup do editor
+*.mex*          # binários MEX compilados
+*.mat           # workspaces salvos (descomente se quiser versionar algum)
+slprj/          # cache do Simulink
+*.slxc          # cache de compilação Simulink
+codegen/        # saída do MATLAB Coder
+octave-workspace
+
+# === Resultados gerados ===
+# Mantém a pasta (via .gitkeep) mas ignora as mídias/figuras produzidas.
+resultados/*
+!resultados/.gitkeep
+*.mp4
+*.avi
+*.fig
+*.png
+*.pdf
+*.eps
+
+# === Sistema operacional ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Editores ===
+.vscode/
+.idea/
+*.swp
