@@ -1,6 +1,6 @@
 function m = avaliaBateria(P, G, cenarios)
 % AVALIABATERIA  Roda uma bateria de cenarios e retorna as PIORES metricas
-%   (mais o esforco medio de controle). Usada pela funcao-objetivo do CMA-ES.
+%   (mais o esforco medio de controle).
 %
 %   cenarios : cell array de structs de cenario (ex.: {degrau, zenite})
 %   Sempre avalia no modo 'continuo' (o metodo principal).
